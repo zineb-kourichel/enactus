@@ -1,0 +1,1729 @@
+  body {
+    
+    margin : 0; 
+  }
+
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+
+      &:hover {
+        color: #FFD700;
+      }
+    }
+
+    button {
+      background-color: #FFD700;
+      color: #2f2f2f;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e6c200;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Burger menu
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s;
+    }
+
+    &.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+
+  // Responsive behavior
+  @media (max-width: 768px) {
+    .burger {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem 2rem;
+      gap: 1rem;
+      display: none;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+  }
+}
+
+
+// Ajuster le contenu sous la navbar
+.video-container {
+  margin-top: 60px; /* Espacement pour tenir compte de la hauteur de la navbar */
+}
+
+// Responsive : lorsque l'écran fait moins de 768px de large (mobiles)
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Les éléments seront empilés verticalement */
+    align-items: center; /* Centrer les éléments */
+    height: auto;
+    padding: 1rem; /* Padding ajusté pour les petits écrans */
+    gap: 1rem;  /* Espacement ajusté entre les éléments */
+
+    a {
+      font-size: 1.2rem;  /* Agrandir la taille des liens sur mobile */
+      padding: 0.5rem 0;  /* Padding pour aérer les liens */
+    }
+
+    button {
+      width: 80%;  /* Le bouton occupe 80% de la largeur de l'écran */
+      margin-top: 1rem; /* Espacement au-dessus du bouton */
+      padding: 1rem 0; /* Padding pour augmenter la taille du bouton */
+    }
+  }
+
+  .video-container {
+    margin-top: 80px; /* Ajuster l'espacement sous la navbar sur mobile */
+  }
+}
+
+// Responsive : lorsque l'écran fait moins de 480px de large (très petits écrans)
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 1rem; /* Moins de padding pour les très petits écrans */
+    gap: 0.8rem;  /* Réduire l'espace entre les éléments */
+
+    a {
+      font-size: 1rem;  /* Diminuer la taille de la police sur petits écrans */
+    }
+
+    button {
+      width: 90%;  /* Le bouton occupe presque toute la largeur */
+      padding: 1.2rem 0; /* Agrandir légèrement le bouton */
+    }
+  }
+}
+
+
+//  STYLE POUR NOTRE MISSION 
+///
+/// //
+/// //
+/// 
+/// 
+/// 
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+$yellow: #f1c40f;
+$dark-gray: #2c3e50;
+$white: #ffffff;
+$background: #f8f9fa;
+
+.mission-wrapper {
+  background-color: $background;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+
+  .mission-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    gap: 2.5rem;
+    margin: 0 auto;
+
+    // Media query pour les écrans jusqu'à 768px (tablettes et petits écrans)
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem; // Réduire l'espacement entre les éléments pour mieux s'adapter aux écrans plus petits
+
+      .mission-text {
+        h1 {
+          font-size: 2rem;  // Réduire la taille du titre pour les petits écrans
+        }
+
+        p {
+          font-size: 1rem;  // Réduire la taille du texte
+        }
+      }
+
+      .mission-image {
+        max-width: 100%; // L'image prend toute la largeur disponible
+      }
+    }
+
+    // Media query pour les très petits écrans (jusqu'à 480px)
+    @media (max-width: 480px) {
+      padding: 3rem 1rem;  // Réduire le padding pour les petits écrans
+
+      .mission-text {
+        h1 {
+          font-size: 1.8rem;  // Taille de texte encore plus petite pour très petits écrans
+        }
+
+        p {
+          font-size: 0.9rem;  // Réduire encore plus la taille du texte
+        }
+      }
+
+      .mission-image {
+        max-width: 100%;
+        margin-bottom: 1rem; // Ajouter un espacement sous l'image pour plus d'aération
+      }
+    }
+  }
+
+  .mission-text {
+    flex: 1;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: $dark-gray;
+      margin-bottom: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #2d2d2d;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .mission-image {
+    flex: 1;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+
+      &:hover {
+        transform: scale(1.06);
+        filter: brightness(1.1);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      width: 100%;
+      height: 100%;
+      border: 4px solid $yellow;
+      border-radius: 0.75rem;
+      z-index: 1;
+    }
+  }
+}
+
+
+//STYLE POUR NOTRE IMPACT 
+//
+//
+//
+//
+//
+
+
+
+// Variables (en accord avec ton thème)
+$yellow: #f1c40f;  // Jaune
+$dark-gray: #2c3e50;  // Gris foncé
+$white: #ffffff;  // Blanc
+$light-gray: #f8f9fa; // Gris clair pour le fond
+
+.impact-section {
+  background-color: $light-gray; // Fond gris clair
+  padding: 4rem 2rem; // Augmenter le padding pour plus d'espace
+  text-align: center;
+  border-radius: 1.2rem; // Légère augmentation du rayon des bords
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); // Ombre plus marquée
+
+  h1 {
+    font-size: 2.4rem;  // Augmenter la taille du titre
+    font-weight: 700;
+    color: $dark-gray;
+    margin-bottom: 2rem;  // Augmenter l'espacement en dessous
+    text-transform: uppercase;
+  }
+
+  .count-grid {
+    display: flex;
+    justify-content: space-evenly; // Disposition horizontale avec espace égal entre les éléments
+    gap: 2rem;  // Augmenter l'espacement entre les éléments
+    flex-wrap: wrap; // Permet aux éléments de passer à la ligne si nécessaire
+    max-width: 1000px; // Limite la largeur maximale de la grille
+    margin: 0 auto; // Centrer la grille horizontalement
+
+    .count-block {
+      background-color: $white; // Fond blanc pour chaque bloc
+      border-radius: 1.2rem; // Augmenter légèrement le rayon des bords
+      padding: 2rem;  // Augmenter le padding dans chaque bloc
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); // Ombre plus marquée
+      transition: all 0.3s ease-in-out;
+      max-width: 180px;  // Augmenter la largeur des blocs
+      width: 100%; // Assurer que chaque bloc occupe la largeur disponible
+
+      &:hover {
+        transform: translateY(-8px); // Augmenter l'élévation au survol
+      }
+
+      img {
+        width: 80px; // Augmenter la taille des icônes
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 1.5rem;  // Augmenter l'espacement entre l'icône et le texte
+      }
+
+      .count-info {
+        p {
+          font-size: 1.1rem;  // Augmenter la taille du texte
+          color: $dark-gray;
+          font-weight: 600;
+          margin-bottom: 0.75rem; // Augmenter l'espacement entre le texte et le chiffre
+        }
+
+        .count-number {
+          font-size: 2.5rem;  // Augmenter la taille des chiffres
+          font-weight: 800;
+          color: $yellow;  // Jaune pour les chiffres
+        }
+      }
+    }
+  }
+}
+
+// Media queries pour les petits écrans
+@media (max-width: 768px) {
+  .impact-section {
+    padding: 3rem 1.5rem; // Ajuster le padding pour les petits écrans
+
+    h1 {
+      font-size: 2rem; // Réduire la taille du titre sur les petits écrans
+    }
+
+    .count-grid {
+      flex-direction: column; // Sur les petits écrans, les éléments deviennent une colonne
+      gap: 1.5rem; // Réduire l'espacement entre les éléments sur mobile
+      padding: 0;  // Éviter des marges internes inutiles
+    }
+  }
+}
+
+// Media query pour les très petits écrans (max-width: 480px)
+@media (max-width: 480px) {
+  .impact-section {
+    padding: 2rem 1rem; // Réduire encore plus le padding sur les très petits écrans
+  }
+
+  h1 {
+    font-size: 1.8rem; // Réduire la taille du titre encore plus pour les très petits écrans
+    margin-bottom: 1.5rem; // Réduire l'espacement sous le titre
+  }
+
+  .count-grid {
+    gap: 1rem; // Réduire l'espacement entre les éléments sur très petits écrans
+  }
+
+  .count-block {
+    max-width: 150px; // Réduire la taille des blocs pour s'adapter aux petits écrans
+    padding: 1.5rem;  // Réduire le padding dans chaque bloc
+  }
+
+  img {
+    width: 70px; // Réduire la taille des icônes sur les petits écrans
+    height: 70px;
+  }
+
+  .count-info p {
+    font-size: 1rem;  // Réduire la taille du texte dans les blocs
+  }
+
+  .count-number {
+    font-size: 2rem;  // Réduire la taille des chiffres
+  }
+}
+
+
+
+//STYLE POUR LE QUOTE 
+//
+//
+//
+//
+
+//
+.Quote {
+  position: relative;
+  width: 100%;
+  min-height: 55vh; // Moins haut
+  padding: 3rem 1rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  color: #2c3e50; // Gris foncé
+  font-family: 'Poppins', sans-serif; // Ou une autre police si tu préfères
+
+  img {
+    margin-bottom: 1rem;
+    height: 30px;
+    width: auto;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #2c3e50; // Gris foncé
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50; // Gris foncé
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2c3e50; // Gris foncé
+  }
+
+  // Media queries pour ajuster les éléments sur des écrans plus petits
+  @media (max-width: 1024px) {
+    padding: 2.5rem 1rem; // Réduire un peu le padding sur les tablettes
+
+    p {
+      font-size: 1rem; // Garder la taille du texte légèrement réduite sur tablette
+    }
+
+    h1 {
+      font-size: 1.1rem; // Réduire légèrement la taille du titre
+    }
+
+    h2 {
+      font-size: 0.95rem; // Réduire la taille du sous-titre
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto; // Enlever la hauteur minimale pour les petits écrans
+    padding: 2rem 1rem; // Réduire le padding pour les écrans mobiles
+
+    p {
+      font-size: 0.95rem; // Réduire la taille du texte pour mieux s'adapter
+    }
+
+    h1 {
+      font-size: 1.1rem; // Ajuster la taille du titre pour les petits écrans
+    }
+
+    h2 {
+      font-size: 0.9rem; // Ajuster la taille du sous-titre pour les petits écrans
+    }
+
+    img {
+      height: 25px; // Réduire la taille de l'image pour les petits écrans
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem; // Réduire le padding encore plus pour les très petits écrans
+
+    p {
+      font-size: 0.9rem; // Réduire un peu plus la taille du texte sur les petits appareils
+    }
+
+    h1 {
+      font-size: 1rem; // Réduire la taille du titre sur les très petits écrans
+    }
+
+    h2 {
+      font-size: 0.85rem; // Réduire le sous-titre pour s'adapter à l'écran
+    }
+
+    img {
+      height: 20px; // Réduire encore la taille de l'image pour très petits écrans
+    }
+  }
+}
+
+
+//STYLE POUR LES PARTENIRE 
+
+//
+///
+/// /
+/// /
+/// 
+/// 
+///    
+///
+.partenaire-carousel {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fdfdfd;
+
+  h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; // Ajout pour positionner les flèches correctement
+
+    .arrow {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #f7b500;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%); // Centrer verticalement les flèches
+
+      &:hover {
+        color: #ffcc00;
+      }
+
+      &:first-of-type {
+        left: 1rem; // Flèche de gauche
+      }
+
+      &:last-of-type {
+        right: 1rem; // Flèche de droite
+      }
+    }
+
+    .carousel-logos {
+      display: flex;
+      gap: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      justify-content: center; // Centrer les logos dans le carousel
+
+      img {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      @media (max-width: 1024px) {
+        img {
+          width: 120px; // Ajuster la taille des images pour les tablettes
+        }
+      }
+
+      @media (max-width: 768px) {
+        img {
+          width: 100px; // Réduire la taille des images pour les écrans plus petits
+        }
+      }
+
+      @media (max-width: 480px) {
+        img {
+          width: 80px; // Réduire encore pour les très petits écrans
+        }
+      }
+    }
+  }
+}
+
+//STYLE POUR A PROPOS \
+// 
+//
+
+//
+
+// custom.scss
+
+.apropos-section {
+  position: relative;
+  width: 100%;
+  height: 300px; // Hauteur par défaut
+
+  overflow: hidden;
+
+  .aproposdenactus {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%); // Rendre l'image plus sombre
+  }
+
+  .apropos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem; // Taille du texte par défaut
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    width: 90%; // S'assurer que le texte ne dépasse pas
+    max-width: 700px; // Limiter la largeur du texte
+
+    @media (max-width: 1024px) {
+      font-size: 1.8rem; // Réduire la taille du texte pour les tablettes
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem; // Réduire encore pour les écrans plus petits
+      width: 85%; // Réduire la largeur du texte
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.2rem; // Taille de texte pour les petits écrans
+      width: 80%; // Réduire davantage pour les très petits écrans
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 250px; // Réduire la hauteur sur les tablettes et petits écrans
+  }
+
+  @media (max-width: 480px) {
+    height: 200px; // Hauteur encore réduite sur les petits écrans
+  }
+}
+
+
+
+//STYLE POUR LA PRESENTATIONENACTUS 
+.enactus-section {
+  background-color: #ffffff;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-repeat: repeat;
+  background-size: auto;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem; // Réduire la padding pour les écrans plus petits
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem; // Réduire davantage la padding sur les très petits écrans
+  }
+}
+
+.enactus-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Empiler les éléments sur les petits écrans
+    align-items: center; // Centrer les éléments
+  }
+}
+
+.text-content {
+  flex: 1 1 50%; // Par défaut, occuper 50% de l'espace
+
+  h1 {
+    font-size: 2.5rem;
+    color: #f7b500;
+    margin-bottom: 1.5rem;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      font-size: 2rem; // Réduire la taille du titre sur les petits écrans
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.7rem; // Réduire encore pour les très petits écrans
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.2rem;
+    border-left: 4px solid #f7b500;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: 768px) {
+      font-size: 1rem; // Réduire la taille du texte sur les petits écrans
+      padding: 1rem; // Réduire la padding
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.95rem; // Réduire encore la taille du texte pour les très petits écrans
+      padding: 0.8rem; // Réduire la padding
+    }
+  }
+}
+
+.image-content {
+  flex: 1 1 45%; // Par défaut, occuper 45% de l'espace
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  &:hover img {
+    filter: brightness(85%);
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    flex: 1 1 80%; // Sur les petits écrans, l'image prend plus de place
+    margin-bottom: 1rem; // Ajouter un espacement entre les éléments
+  }
+
+  @media (max-width: 480px) {
+    flex: 1 1 100%; // Sur les très petits écrans, l'image occupe toute la largeur
+  }
+}
+
+
+
+//STYLE POUR NOTREEQUIPE 
+///\
+/// 
+/// 
+/// 
+/// 
+///    
+    .notre-equipe {
+  text-align: center;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    cursor: default;
+
+    /* Soulignement jaune */
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: #FFD700; /* Jaune doré */
+      bottom: -8px;
+      left: 0;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    /* Hover en jaune vif */
+    &:hover {
+      color: #FFD700;
+    }
+
+    &:hover::after {
+      height: 6px;
+      background: #FFC300; /* Un jaune légèrement plus vif */
+    }
+  }
+}
+
+.membres-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 1200px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.8rem;
+  }
+}
+
+.membre {
+  text-align: center;
+  background-color: #f9f9f9; /* Gris clair */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 220px;
+  margin: 1rem auto;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #aaa; /* Gris plus clair pour la bordure */
+    margin-bottom: 1rem;
+    transition: filter 0.3s ease;
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 480px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+    color: #333; /* Gris foncé pour le texte */
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #666; /* Gris moyen pour la description */
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+
+
+
+//STYLE POUR NOTRE PROJET
+//
+//
+//
+//
+  // custom.scss
+// .projets-section
+.projets-section {
+  position: relative;
+  width: 100%;
+  height: 300px; // ajustable selon le design
+  overflow: hidden;
+
+  .project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+
+  .projets-titre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 768px) {
+      font-size: 24px; // réduction de la taille du titre sur les petits écrans
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px; // taille encore plus petite pour les très petits écrans
+    }
+  }
+}
+
+// custom.scss
+
+$jaune: #f1c40f;
+$gris: #2c3e50;
+$blanc: #ffffff;
+
+.projets-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* espacement réduit */
+  padding: 30px;
+  justify-items: center;
+  background-color: #f5f5f5;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur les tablettes */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* 1 colonne sur les petits écrans */
+    padding: 20px; /* réduction du padding sur les petits écrans */
+  }
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 280px; /* légèrement réduit */
+  height: 350px; /* légèrement réduit */
+
+  @media (max-width: 768px) {
+    width: 220px; /* réduction de la taille des cartes sur les tablettes */
+    height: 300px; /* réduction de la hauteur des cartes sur les tablettes */
+  }
+
+  @media (max-width: 480px) {
+    width: 180px; /* réduction encore plus petite sur les petits écrans */
+    height: 250px; /* réduction encore plus petite */
+  }
+}
+
+.projet {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* légère réduction de l'ombre */
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .front {
+    background-color: $blanc;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .back {
+    background-color: $gris;
+    color: $blanc;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* réduction du padding */
+
+    h1 {
+      font-size: 18px; /* réduction de la taille de la police */
+      color: $jaune;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 14px; /* augmentation de la taille de police pour améliorer la lisibilité */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .front, .back {
+      padding: 8px; /* réduction du padding sur les tablettes */
+    }
+
+    .back {
+      h1 {
+        font-size: 16px; /* réduction de la taille du titre sur les tablettes */
+      }
+
+      p {
+        font-size: 13px; /* réduction de la taille de police sur les tablettes */
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .front, .back {
+      padding: 6px; /* réduction encore plus grande du padding */
+    }
+
+    .back {
+      h1 {
+        font-size: 14px; /* réduction de la taille du titre sur les petits écrans */
+      }
+
+      p {
+        font-size: 12px; /* réduction de la taille de police sur les petits écrans */
+      }
+    }
+  }
+}
+
+
+//STYLE POUR EVENEMENT 
+//
+//
+///
+/// /
+ 
+
+// custom.scss
+.evenement-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+  .evenement {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+
+  .evenement-titre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 768px) {
+      font-size: 24px; /* réduction de la taille du titre sur les petits écrans */
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px; /* encore plus petit pour les très petits écrans */
+    }
+  }
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    padding: 20px; /* réduction du padding sur les tablettes */
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px; /* encore moins de padding sur les petits écrans */
+  }
+}
+
+.evenement-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  gap: 24px;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 12px 12px 0;
+
+    @media (max-width: 768px) {
+      width: 100%; /* Image prend toute la largeur sur tablette */
+      height: 200px; /* hauteur réduite pour les tablettes */
+    }
+
+    @media (max-width: 480px) {
+      height: 150px; /* hauteur encore plus réduite sur mobile */
+    }
+  }
+
+  .event-text {
+    width: 50%;
+    padding: 24px;
+
+    h2 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 12px;
+
+      @media (max-width: 768px) {
+        font-size: 20px; /* réduction de la taille du titre sur tablette */
+      }
+
+      @media (max-width: 480px) {
+        font-size: 18px; /* encore plus petit pour mobile */
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+
+      @media (max-width: 768px) {
+        font-size: 14px; /* réduction de la taille de la police sur tablette */
+      }
+
+      @media (max-width: 480px) {
+        font-size: 12px; /* réduction pour mobile */
+      }
+    }
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+
+    img {
+      border-radius: 12px 0 0 12px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* empile les éléments en colonne sur tablette */
+    gap: 16px; /* réduction de l'espace entre l'image et le texte */
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column; /* empile les éléments en colonne sur mobile */
+    gap: 12px; /* encore plus petit espace entre les éléments */
+  }
+}
+
+
+//STYLE POUR LE NAVBAR 
+
+//
+// 
+//
+//
+//
+
+
+.Footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  position: relative;
+
+  .Contact {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    padding: 0 1rem;
+
+    .logowhite {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 200px;
+      height: auto;
+
+      @media (max-width: 768px) {
+        position: static;
+        width: 150px;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 480px) {
+        width: 120px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem;
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+
+    .address {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      line-height: 1.4;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    h2 {
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      line-height: 1.5;
+
+      @media (max-width: 480px) {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .connecter {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffcc00;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.2rem;
+        margin: 0 8px;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+//STYLE POUR PRESENTATION 
+//
+//
+//
+//
+//---------------------------
+//--------------------------
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.presentation-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+  position: relative;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+
+  .presentation-image-wrapper {
+    position: relative;
+    width: 600px; /* Reste à 600px pour les écrans larges */
+    height: 500px; /* Fixe la hauteur */
+    margin-right: 2rem;
+
+    .gray-background-square {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 100%;
+      height: 100%;
+      background-color: #252525c4;
+      z-index: 1;
+    }
+
+    .presentation-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(36, 36, 36, 0.3);
+    }
+  }
+
+  .presentation-box {
+    background-color: white;
+    padding: 2rem;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(2, 2, 2, 0.301);
+    position: relative;
+    top: -2px;
+    margin-left: -100px;
+    z-index: 3;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .presentation {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  // TABLET (max-width: 992px)
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+
+    .presentation-image-wrapper {
+      width: 90%; /* Ajuster la largeur de l'image pour les tablettes */
+      height: auto; /* Laisser l'image s'ajuster automatiquement en hauteur */
+      margin-right: 0; /* Retirer l'espacement sur la droite */
+      margin-bottom: 2rem; /* Espacement en bas */
+    }
+
+    .presentation-box {
+      margin-left: 0; /* Enlever le décalage à gauche */
+      max-width: 90%; /* Ajuster la largeur de la boîte */
+      text-align: center; /* Centrer le texte */
+    }
+  }
+
+  // MOBILE (max-width: 576px)
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+
+    .presentation-box {
+      padding: 1.5rem;
+      max-width: 100%; /* La boîte prend 100% de la largeur */
+      text-align: center;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .presentation {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+
+    .presentation-image-wrapper {
+      width: 100%; /* L'image prend toute la largeur de l'écran */
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+//STYLE POUR IMAGE D ACCEUIL 
+//----------------
+//--------------
+//--------------------------
+.fftm {
+  width: 100%;
+  height: auto;
+  display: block; // Supprime l'espace blanc sous l'image
+  object-fit: cover;
+  max-width: 100%; // Pour éviter le débordement dans les conteneurs
+  border-radius: 8px; // Optionnel : ajoute une petite touche de design
+
+  // Responsive image height (si l'image a besoin d'une hauteur définie)
+  @media (max-width: 768px) {
+    height: auto; // S'assure que l'image s'adapte à la hauteur du contenu
+    object-fit: contain; // Affiche toute l'image sans la couper
+  }
+}
+
+
+
+//STYLE POUR LE FORMULAIRE 
+//
+//
+//
+///
+/// /
+/// 
+/// 
+/// --------------
+/// -----------------
+.join-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #1d1e1f; // fond gris foncé
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  position: relative;
+  z-index: 1;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 30px;
+    background-color: #292929; // légèrement plus clair que le fond
+    box-shadow: 0 15px 40px rgba(44, 44, 44, 0.6);
+    border-radius: 10px;
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #f1c40f;
+      margin-bottom: 20px;
+      text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    input,
+    textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      background-color: #343435;
+      color: white;
+      box-shadow: 0 4px 12px rgba(73, 73, 73, 0.3);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+
+      &::placeholder {
+        color: #bbb;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 12px #f1c40f;
+        background-color: #232324;
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #f1c40f;
+      color: #2c3e50;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background-color: #e1b800;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+// =====================
+// Responsive Design
+// =====================
+
+@media (max-width: 768px) {
+  .join-us-container {
+    padding: 30px 15px;
+    margin: 30px auto;
+    max-width: 90%;
+  }
+
+  .join-us-container form {
+    padding: 20px;
+  }
+
+  .join-us-container form h1 {
+    font-size: 1.8rem;
+  }
+
+  .join-us-container form input,
+  .join-us-container form textarea {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .join-us-container form button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .join-us-container p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-us-container {
+    padding: 20px 10px;
+    margin: 20px auto;
+  }
+
+  .join-us-container form {
+    padding: 15px;
+    gap: 0.8rem;
+  }
+
+  .join-us-container form h1 {
+    font-size: 1.5rem;
+  }
+
+  .join-us-container form input,
+  .join-us-container form textarea {
+    font-size: 0.85rem;
+  }
+
+  .join-us-container form button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .join-us-container p {
+    font-size: 0.95rem;
+  }
+}
+
+
+//
+//
+//
+/* Background image full screen */
+.background-formulaire {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; // Behind everything else
+
+  @media (max-width: 768px) {
+    object-position: center;
+  }
+
+  @media (max-width: 480px) {
+    object-position: center top;
+  }
+}
+
+/* Form container styling */
+.join-us-container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+}
+
+
+
+//STYLE FOR BACK TO TOP BUTTON 
+//
+
+//
+//----------------
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #ffcc00; // bright yellow
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+
+
+  &:hover {
+    background-color: #ffdb4d; // lighter yellow on hover
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

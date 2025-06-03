@@ -1,0 +1,71 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.hero-title {
+  display: flex;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.hero-letter {
+  margin: 0 2px;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+
+.underline {
+  height: 4px;
+  background: #FFD700;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #f0f0f0;
+  max-width: 600px;
+}
