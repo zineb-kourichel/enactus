@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/zineb-kourichel/.github.io/enactus/static/css/main.4037a731.css",
+    "main.js": "/zineb-kourichel/.github.io/enactus/static/js/main.693db721.js",
+    "index.html": "/zineb-kourichel/.github.io/enactus/index.html",
+    "main.4037a731.css.map": "/zineb-kourichel/.github.io/enactus/static/css/main.4037a731.css.map",
+    "main.693db721.js.map": "/zineb-kourichel/.github.io/enactus/static/js/main.693db721.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4037a731.css",
+    "static/js/main.693db721.js"
+  ]
+}
