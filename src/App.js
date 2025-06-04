@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App" style={{ overflowX: "hidden" }}   >
       
-      <Router>
+        <Router  basename="/enactus">
       <Routes>
       <Route element={<Layout/>} >
       <Route path ="/" element={<Acceuil/>} />

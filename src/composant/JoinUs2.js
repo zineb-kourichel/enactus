@@ -69,7 +69,7 @@ function JoinUs(){
 
   return(
         <>
-        <img src="/images/09.jpg" alt="background" className="background-formulaire" />
+          <img src="/images/09.jpg" alt="background" className="background-formulaire" />
         <div className="join-us-container">
           {Submited ? (
             <p>Merci ! Votre demande a été envoyée.</p>
