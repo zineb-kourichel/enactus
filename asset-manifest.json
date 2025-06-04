@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/enactus/static/css/main.4037a731.css",
-    "main.js": "/enactus/static/js/main.d5e606e0.js",
+    "main.js": "/enactus/static/js/main.f64f98a8.js",
     "index.html": "/enactus/index.html",
     "main.4037a731.css.map": "/enactus/static/css/main.4037a731.css.map",
-    "main.d5e606e0.js.map": "/enactus/static/js/main.d5e606e0.js.map"
+    "main.f64f98a8.js.map": "/enactus/static/js/main.f64f98a8.js.map"
   },
   "entrypoints": [
     "static/css/main.4037a731.css",
-    "static/js/main.d5e606e0.js"
+    "static/js/main.f64f98a8.js"
   ]
 }
