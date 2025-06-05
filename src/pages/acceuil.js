@@ -25,7 +25,7 @@ function Acceuil() {
       <InfiniteCarousel/>
       <Notremission/>
     <Notreimpact/>
-    <img className="fftm" src="/images/fftm2.png" alt="picture" />
+    <img className="fftm" src="images/fftm2.png" alt="picture" />
 
     <Quote/>
     <Partenaire/>

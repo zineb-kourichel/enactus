@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
 const images = [
-    '%PUBLIC_URL%/images/carousel/01.jpg',
-    '%PUBLIC_URL%/images/carousel/04.jpg',
-    '%PUBLIC_URL%/images/carousel/05.jpg',
-    '%PUBLIC_URL%/images/carousel/02.jpg',
-    '%PUBLIC_URL%/images/carousel/06.jpg',
-    '%PUBLIC_URL%/images/carousel/07.jpg',
-    '%PUBLIC_URL%/images/carousel/03.jpg',
-    '%PUBLIC_URL%/images/carousel/08.jpg',
-    '%PUBLIC_URL%/images/carousel/09.jpg',
+    'images/carousel/01.JPG',
+    'images/carousel/04.JPG',
+    'images/carousel/05.JPG',
+    'images/carousel/02.JPG',
+    'images/carousel/06.JPG',
+    'images/carousel/07.JPG',
+    'images/carousel/03.JPG',
+    'images/carousel/08.JPG',
+    'images/carousel/09.JPG',
 ];
 
 const InfiniteCarousel = () => {
