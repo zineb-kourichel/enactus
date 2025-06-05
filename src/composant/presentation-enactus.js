@@ -6,7 +6,7 @@ function Presentation() {
     <div className="presentation-container" >
             <div className="presentation-image-wrapper">
             <div className="gray-background-square"></div>
-    <img  src='/images/enactusjaune.png' alt='back'  height={800} width={900}  className="presentation-image"  />
+    <img  src='images/enactusjaune.png' alt='back'  height={800} width={900}  className="presentation-image"  />
       </div>
        <div  className="presentation-box">
 
