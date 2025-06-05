@@ -12,7 +12,7 @@ function Enactusfsbm() {
           </p>
         </div>
         <div className="image-content">
-          <img src="/images/fsbm.jpg" alt="Enactus FSBM" />
+          <img src="images/fsbm.JPG" alt="Enactus FSBM" />
         </div>
       </div>
     </section>

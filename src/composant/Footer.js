@@ -8,7 +8,7 @@ function Footer(){
         <div className="Footer">
      
          <div className="Contact">
-                <img src="/images/logowhite.png" alt="logowhite"  className="logowhite"/>
+                <img src="images/Logowhite.png" alt="logowhite"  className="logowhite"/>
             <p>Contactez-nous</p>
             <h1 className="address">
                 Enactus FSBM, Faculté des Sciences Ben M'Sick - Bd Commandant Driss Al Harti, Casablanca 20670 - Maroc

@@ -21,7 +21,7 @@ function Apropos() {
     <div >
       <div className="apropos-section">
 
-          <img src='images/apropos.jpg' alt='apropos' className='aproposdenactus'/>
+          <img src='images/apropos.JPG' alt='apropos' className='aproposdenactus'/>
       <h1 className='apropos'>À propos d’Enactus</h1>   
       </div>
       <RandomMovementPage/>

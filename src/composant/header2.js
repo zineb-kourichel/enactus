@@ -26,7 +26,7 @@ export default function HeroIntro2() {
   return (
     <div className="hero-container">
       <video
-          src="/images/enactusvideo2.mp4"
+          src="images/enactusvideo2.mp4"
         autoPlay
         muted
         loop
@@ -38,7 +38,7 @@ export default function HeroIntro2() {
         <div className="title-logo-container">
           {/* Logo */}
           <motion.img
-              src="/images/logo.png"
+              src="images/logo.png"
             alt="Enactus Logo"
             className="logo"
             initial={{ rotate: -10, opacity: 0 }}

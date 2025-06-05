@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../custom.scss';
 
 const logos = [
-    '/images/partenaireslogo/eerchad.png',
-    '/images/partenaireslogo/fsbm.png',
-    '/images/partenaireslogo/imitech.png',
-    '/images/partenaireslogo/injaz.png',
-    '/images/partenaireslogo/pe2i.png',
-    '/images/partenaireslogo/pie.png',
+    'images/partenaireslogo/eerchad.png',
+    'images/partenaireslogo/fsbm.png',
+    'images/partenaireslogo/imitech.png',
+    'images/partenaireslogo/injaz.png',
+    'images/partenaireslogo/pe2i.png',
+    'images/partenaireslogo/pie.png',
 ];
 
 const visibleCount = 4; // Combien de logos visibles à la fois

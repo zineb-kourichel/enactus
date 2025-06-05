@@ -19,7 +19,7 @@ function Notremission() {
           </p>
         </div>
         <div className="mission-image">
-            <img src="/images/mission.jpg" alt="mission" />
+            <img src="images/mission.JPG" alt="mission" />
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const Notreimpact = () => {
     <h1>Notre impact</h1>
     <div className="count-grid">
       <div className="count-block">
-          <img src="/images/newicon/etudi.png" alt="étudiant" />
+          <img src="images/newicon/etudi.png" alt="étudiant" />
         <div className="count-info">
           <p>Jeunes mobilisés</p>
           <div className="count-number">
@@ -30,7 +30,7 @@ const Notreimpact = () => {
       </div>
 
       <div className="count-block">
-          <img src="/images/newicon/project.png" alt="projets développés" />
+          <img src="images/newicon/project.png" alt="projets développés" />
         <div className="count-info">
           <p>Projets développés</p>
           <div className="count-number">
@@ -40,7 +40,7 @@ const Notreimpact = () => {
       </div>
 
       <div className="count-block">
-          <img src="/images/newicon/finace2.png" alt="bénéficiaires impactés" />
+          <img src="images/newicon/finace2.png" alt="bénéficiaires impactés" />
         <div className="count-info">
           <p>Bénéficiaires impactés</p>
           <div className="count-number">
@@ -50,7 +50,7 @@ const Notreimpact = () => {
       </div>
 
       <div className="count-block">
-          <img src="/images/newicon/learninghours.png" alt="heures de formation" />
+          <img src="images/newicon/learninghours.png" alt="heures de formation" />
         <div className="count-info">
           <p>Heures de formations</p>
           <div className="count-number">
@@ -60,7 +60,7 @@ const Notreimpact = () => {
       </div>
 
       <div className="count-block">
-          <img src="/images/newicon/brojetdurable.jpeg" alt="ODD touchés" />
+          <img src="images/newicon/brojetdurable.jpeg" alt="ODD touchés" />
         <div className="count-info">
           <p>Objectifs du développement durable touchés</p>
           <div className="count-number">

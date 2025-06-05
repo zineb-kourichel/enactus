@@ -3,7 +3,7 @@ import { useRef } from 'react';
 
 const images = [
     "images/carousel/01.JPG",
-    "images/carousel/04.JPG2",
+    "images/carousel/04.JPG",
     "images/carousel/05.JPG",
     "images/carousel/02.JPG",
     "images/carousel/06.JPG",

@@ -21,7 +21,7 @@ export default function RandomMovementAnimation() {
         transform: "translate(-50%, -50%)", // To center the logo
         width: "200px", // Set logo size
         height: "100px",
-        backgroundImage: "url('/images/Logowhite.png')", // Your logo image path
+        backgroundImage: "url('images/Logowhite.png')", // Your logo image path
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         borderRadius: "50%",
